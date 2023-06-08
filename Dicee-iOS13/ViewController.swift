@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         print("button \(sender.buttonType) pressed")
         let diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")] //array of images
         diceImageView1.image = diceArray.randomElement() //randomly chooses an element from the array
-        diceImageView2.image = diceArray.randomElement()
+        diceImageView2.image = diceArray[Int.random(in: 0...5)]
     }
     
 }
