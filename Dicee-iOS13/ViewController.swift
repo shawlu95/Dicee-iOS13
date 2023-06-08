@@ -20,7 +20,13 @@ class ViewController: UIViewController {
         diceImageView1.alpha = 0.5
     }
 
+    /*
+     Multiline comment
+     String interpolation is nice
+     Press button to randomly replace the two dices' images
+     */
     @IBAction func rollButtonPressed(_ sender: UIButton) {
+        print("button \(sender.buttonType) pressed")
         let diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")] //array of images
         diceImageView1.image = diceArray.randomElement() //randomly chooses an element from the array
         diceImageView2.image = diceArray.randomElement()
