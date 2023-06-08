@@ -30,6 +30,17 @@ class ViewController: UIViewController {
         let diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")] //array of images
         diceImageView1.image = diceArray.randomElement() //randomly chooses an element from the array
         diceImageView2.image = diceArray[Int.random(in: 0...5)]
+        
+        generatePassword()
+    }
+    
+    func generatePassword() {
+        let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+        var password = ""
+        for _ in 1...6 {
+            password += alphabet.randomElement()!
+        }
+        print(password)
     }
     
 }
