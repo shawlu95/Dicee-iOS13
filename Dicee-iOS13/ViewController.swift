@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        diceImageView1.image = #imageLiteral(resourceName: "DiceSix")
+        diceImageView1.alpha = 0.5
     }
 
 
